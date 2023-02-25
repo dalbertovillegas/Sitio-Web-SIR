@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 19px;
+}
+.container{
+    background-color: white;
+    width: 90%;
+    max-width: 69.5rem;
+    margin: 2em auto;
+    box-shadow: 0 0 0.625rem rgba(0,0,0,.3);
+}
+header{
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    background-color: #333;
+    width: 94.7%;
+    position: relative;
+    color: #ccc;
+}
+#bordearriba{
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: #000;
+    height: 123px;
+    top: 8px;
+    position: relative;
+    color: white;
+}
+.menu{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 105px;
+    list-style: none;
+    font-size: 20px;
+}
+.menu li{
+    display: inline-block;
+}
+.menu li a{
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    position: relative;
+    left: 340px;
+    color: black;
+}
+.menu li a:hover{
+    text-decoration: underline;
+}
+.alignright{
+    float: right;
+    margin: 0 0 1em 1em;
+    width: 250px;
+    height: 250px;
+}
+.sidebar{
+    width: 30%;
+    border-left: 0.0625rem solid #dbdbdb;
+    padding: 2em;
+}
+.img1{
+    width: 100%;
+}
+.columna-contenido, .sidebar{
+    display: table-cell;
+    width: 70%;
+    padding: 2em;
+}
+main{
+    display: table-cell;
+    width: 70%;
+    padding: 1em;
+}
+footer{
+    width: 93.6%;
+    padding: 1.9em;
+    position: relative;
+    height: 152px;
+    background-color: #333;
+    color: #ccc;
+}
+#socialmedia{
+    width: 347px;
+    float: left;
+    border-top-right-radius: 50px;
+    text-decoration: none;
+    border-color: #ccc;
+    height: 186px;
+    position: relative;
+    left: 682px;
+    bottom: 186px;
+    padding-left: 12px;
+    background-color: black;
+}
+#social{
+    width: 70px;
+    height: 50px;
+    border-radius: 50px;
+    float: left;
+    position: relative;
+    margin-left: 143px;
+    padding-left: 26px;
+}
+#enlaces-1{
+    width: 370px;
+    float: left;
+    padding-left: 23px;
+    height: 186px;
+    position: relative;
+    right: 120px;
+    background-color: black;
+    margin-right: 100px;
+}
+#pie{
+    width: 1000px;
+}
+a{
+    color: #ccc;
+    text-decoration: none;
+}
+.acerca{
+    width: 280px;
+    float: left;
+    left: 5px;
+    padding-left: 12px;
+    position: relative;
+    margin-right: 120px;
+    border-top-left-radius: 50px;
+    border-color: white;
+    height: 185px;
+    background-color: black;
+}
+#contact{
+    width: 100%;
+    font-size: 17px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    top: 40px;
+}
+#contact .container{
+    width: 100%;
+    height: 50vh;
+    padding-top: 40px;
+    background-color: #000000dd;
+    text-align: center;
+}
+#contact .container .section-title{
+    color: #ffffff;
+}
+#contact .container form{
+    font-size: 17px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+#contact .container form .form-input{
+    border: 0;
+    border-bottom: 1px solid #fff;
+    border-radius: 10px;
+    color: #000;
+    display: block;
+    font-size: 17px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+}
+#contact .container form .form-button{
+    border: 3px solid white;
+    border-radius: 10px;
+    display: block;
+    font-size: 17px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #000;
+    padding: 20px;
+    margin: 0 10px;
+    width: 620px;
+    color: white;
+}
+#contact .container form .form-button:hover{
+    background-color: #fff8;
+    color: #000;
+}
+.slider{
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: cambio 20s infinite alternate linear;
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+.slider img{
+    width: 100%;
+}
+@keyframes cambio {
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+.button-up{
+    width: 60px;
+    height: 60px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    border: 4px solid transparent;
+    transition: all 300ms ease;
+    transform: scale(1);
+}
+.button-up:hover{
+    transform: scale(1.1);
+    border-color: rgba(0,0,0,0.1);
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="img/png" href="carpeta/121537.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    <meta http-equiv="X-UA-Compatible" content="Maquetacion en CSS y HTML5">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>SIR JC SAS &#8211; Solución Integral al Riesgo JC &#8211; S.A.S</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div id="bordearriba">
+                <h2 style="position: relative;top: 45px;">SIR JC SAS - Solución Integral al Riesgo</h2>
+            </div>
+        </header>
+        <nav>
+            <div>
+                <ul class="menu">
+                    <li><a href="sitio web ejemplo nosotros-1.html"><i class="fa fa-users" aria-hidden="true"></i>Nosotros</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section>
+            <div class="slider">
+                <ul>
+                    <li><img src="carpeta/slider1.jpg"></li>
+                    <li><img src="carpeta/slider2.jpg"></li>
+                    <li><img src="carpeta/slider3.jpg"></li>
+                    <li><img src="carpeta/slider4.jpg"></li>
+                </ul>
+            </div>
+        </section>
+        <main>
+            <div>
+                <section class="columna-contenido">
+                    <article>
+                        <h2>Auditoría corporativa</h2>
+                        <ul>
+                            <li>Programa de Vigilancia Epidemiologica para la Prevencion de 
+                                la Hipoacusia.
+                            </li>
+                            <li>PVE para la prevencion de la neumocaniosis.</li>
+                            <li>Movilidad Segura y Sostenible.</li>
+                        </ul>
+                    </article>
+                    <img src="carpeta/empresa6.png" width="540px">
+                    <br><br>
+                    <img src="carpeta/macbook-laptop-ipad-apple-38519.jpeg" width="540px">
+                </section>
+                <aside class="sidebar">
+                    <h3>Informacion Personal</h3>
+                    <div>
+                        <img src="carpeta/fotomodelo.jpg" alt="fotomodelo" height="520px">
+                    </div>
+                    <div>
+                        <p>Jennifer rocha</p>
+                        <p>Consultor SG-SST</p>
+                        <p>Servicios de Asesoria y consultoría en el Area de la 
+                            Salud y Medio Ambiente, Formulación, elaboracion y 
+                            evaluación de estudios ambientales, Planes de manejo 
+                            ambiental, Planes de gestion integral de residuos o 
+                            desechos y planes de gestion de devolucion de productos 
+                            postconsumo (baterías, plomo, ácido, medicamentos y 
+                            agroquímicos).
+                        </p>
+                    </div>
+                </aside>
+            </div>
+            <div>
+                <section class="columna-contenido" style="position: relative;bottom: 22px;">
+                    <article>
+                        <h2>Intervención de la Gestión de Riesgos en Tareas de Alto Riesgo</h2>
+                        <ul>
+                            <li>Trabajos en Alturas.</li>
+                            <li>Trabajo en espacios confinados.</li>
+                            <li>Trabajos con Izaje de Carga.</li>
+                            <li>Trabajo con Sustancias Químicas (Cancerígenas)</li>
+                        </ul>
+                    </article>
+                    <img src="carpeta/empresa7.jpg" width="540px">
+                </section>
+            </div>
+            <div>
+                <section class="columna-contenido" style="position: relative;bottom: 22px;">
+                    <h2>Intervención de la Gestión de Riesgos Laborales</h2>
+                    <ul>
+                        <li>Formaciones lúdicas, con herramientas en sitio, que faciliten 
+                            en aprendizaje al receptor.
+                        </li>
+                        <li>Construcción de canciones o jingles que transmitan mensajes 
+                            positivos de seguridad para promover autocuidado.
+                        </li>
+                        <li>Shows Musicales en Prevención de Riesgos Laborales.</li>
+                        <li>Recreación de Accidentes laborales con Entrega de 
+                            Recomendaciones.
+                        </li>
+                    </ul>
+                    <iframe width="845" height="475" src="https://www.youtube.com/embed/S2miskJGBts" title="DILE NO A LAS GUACHARACADAS!  - EL 🚌 LO NUEVO DE LA SST" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div id="pie">
+                <section class="acerca">
+                    <h4>Sobre la empresa</h4>
+                    <p>te asesoramos y te capacitamos de forma correcta en riesgos 
+                        laborales de seguridad y salud en el trabajo
+                    </p>
+                </section>
+                <section id="enlaces-1">
+                    <h4>Contacto</h4>
+                    <p><i class="fa fa-phone-square" aria-hidden="true"></i> Telefono: <a href="tel:312 332 7368">312 332 7368</a><br><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:solucionintegarlalriesgo@gmail.com">solucionintegarlalriesgo@gmail.com</a><br>
+                        <i class="fa fa-street-view" aria-hidden="true"></i> Dirección: <a href="https://goo.gl/maps/eUiKvgSsTiPDYtV89">Calle 72 No 39-71</a><br>
+                        <i class="fa fa-phone-square" aria-hidden="true"></i> Telefono (2): <a href="tel:316 749 9436">316 749 9436</a>
+                    </p>
+                </section>
+                <section id="socialmedia">
+                    <h4>Redes Sociales</h4>
+                    <p><b>&copy;</b> Derechos reservados<br>SIR Solucion integral al riesgo 2022</p>
+                    <a href="#" class="fa-brands fa-square-facebook"></a>
+                    <a href="#" class="fa-brands fa-youtube"></a>
+                    <a href="#" class="fa-brands fa-instagram"></a>
+                    <a href="#" class="fa-brands fa-twitter"></a>
+                </section>
+            </div>
+        </footer>
+    </div>
+    <a href="#top">
+        <div class="button-up">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+    </a>
+    <script>
+        $(window).scroll(function() {
+        var position =$(this).scrollTop();
+        if (position > 300) {
+        $(".button-up").fadeIn('slow');
+        } else {
+        $(".button-up").fadeOut('slow');
+        }
+    });
+    </script>
+</body>
+</html>
